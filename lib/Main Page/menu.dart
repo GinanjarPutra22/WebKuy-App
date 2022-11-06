@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:web_kuy/Main%20Page/materi.dart';
 import 'package:web_kuy/daftar_masuk/daftar_screen.dart';
 import 'package:web_kuy/daftar_masuk/masuk_screen.dart';
 import 'package:web_kuy/splash/splash_01.dart';
@@ -107,8 +108,7 @@ class menu extends StatelessWidget {
                                     Navigator.pushReplacement(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) =>
-                                                masuk_screen()));
+                                            builder: (context) => materi()));
                                   },
                                   splashColor: Colors.grey,
                                   child: Center(
