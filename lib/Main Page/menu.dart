@@ -75,7 +75,7 @@ class menu extends StatelessWidget {
             decoration: BoxDecoration(
                 color: Colors.white, borderRadius: BorderRadius.circular(25)),
             width: null,
-            height: 490,
+            height: 600,
             child: Column(
               children: [
                 // --------------------------Card Menu------------------------------------
@@ -233,6 +233,75 @@ class menu extends StatelessWidget {
                     'Kuy Membaca',
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                   ),
+                ),
+                Container(
+                  height: 110,
+                  //margin: EdgeInsets.only(right: 17, left: 17),
+                  child: ListView.separated(
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (context, index) {
+                        return GestureDetector(
+                          onTap: () {},
+                          child: Card(
+                              elevation: 5,
+                              margin: EdgeInsets.only(
+                                right: 15,
+                                top: 5,
+                                bottom: 5,
+                              ),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: const BorderRadius.all(
+                                  Radius.circular(8.0),
+                                ),
+                              ),
+                              child: Column(
+                                children: [
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(10),
+                                        topRight: Radius.circular(10)),
+                                    child: Image.asset(
+                                      "images/masuk-daftar.png",
+                                      width: 250,
+                                      height: 150,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Container(
+                                    width: 220,
+                                    padding: EdgeInsets.only(top: 5),
+                                    alignment: Alignment.centerLeft,
+                                    child: Text(
+                                      "gxdgjhgbkhkc",
+                                      textAlign: TextAlign.left,
+                                      style: TextStyle(
+                                          fontFamily: 'Baloo 2',
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.w600),
+                                    ),
+                                  ),
+                                  Container(
+                                    width: 220,
+                                    margin: EdgeInsets.only(right: 5, left: 5),
+                                    alignment: Alignment.centerLeft,
+                                    child: Text(
+                                      "jhftdrsdfghjklouiytgfcvhjkyutrdgf",
+                                      textAlign: TextAlign.left,
+                                      style: TextStyle(
+                                        fontFamily: 'Baloo 2',
+                                        fontSize: 13,
+                                        //fontWeight: FontWeight.w600
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              )),
+                        );
+                      },
+                      separatorBuilder: (context, index) {
+                        return Divider();
+                      },
+                      itemCount: 1),
                 ),
 
                 // Card Bacaan------------------------
