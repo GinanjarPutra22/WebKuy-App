@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:web_kuy/Main%20Page/materi.dart';
 import 'package:web_kuy/daftar_masuk/daftar_screen.dart';
 import 'package:web_kuy/daftar_masuk/masuk_screen.dart';
@@ -32,7 +33,7 @@ class menu extends StatelessWidget {
               icon: new Icon(Icons.notifications, color: Colors.white))
         ],
       ),
-      body: Column(
+      body: ListView(
         children: [
           Container(
             margin: EdgeInsets.only(top: 24),
@@ -234,75 +235,76 @@ class menu extends StatelessWidget {
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                   ),
                 ),
-                Container(
-                  height: 110,
-                  //margin: EdgeInsets.only(right: 17, left: 17),
-                  child: ListView.separated(
-                      scrollDirection: Axis.horizontal,
-                      itemBuilder: (context, index) {
-                        return GestureDetector(
-                          onTap: () {},
-                          child: Card(
-                              elevation: 5,
-                              margin: EdgeInsets.only(
-                                right: 15,
-                                top: 5,
-                                bottom: 5,
-                              ),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: const BorderRadius.all(
-                                  Radius.circular(8.0),
-                                ),
-                              ),
-                              child: Column(
-                                children: [
-                                  ClipRRect(
-                                    borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(10),
-                                        topRight: Radius.circular(10)),
-                                    child: Image.asset(
-                                      "images/masuk-daftar.png",
-                                      width: 250,
-                                      height: 150,
-                                      fit: BoxFit.cover,
-                                    ),
-                                  ),
-                                  Container(
-                                    width: 220,
-                                    padding: EdgeInsets.only(top: 5),
-                                    alignment: Alignment.centerLeft,
-                                    child: Text(
-                                      "gxdgjhgbkhkc",
-                                      textAlign: TextAlign.left,
-                                      style: TextStyle(
-                                          fontFamily: 'Baloo 2',
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w600),
-                                    ),
-                                  ),
-                                  Container(
-                                    width: 220,
-                                    margin: EdgeInsets.only(right: 5, left: 5),
-                                    alignment: Alignment.centerLeft,
-                                    child: Text(
-                                      "jhftdrsdfghjklouiytgfcvhjkyutrdgf",
-                                      textAlign: TextAlign.left,
-                                      style: TextStyle(
-                                        fontFamily: 'Baloo 2',
-                                        fontSize: 13,
-                                        //fontWeight: FontWeight.w600
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              )),
-                        );
-                      },
-                      separatorBuilder: (context, index) {
-                        return Divider();
-                      },
-                      itemCount: 1),
-                ),
+                // ---------------- Card Bacaan----------------
+                // Container(
+                //   height: 110,
+                //   //margin: EdgeInsets.only(right: 17, left: 17),
+                //   child: ListView.separated(
+                //       scrollDirection: Axis.horizontal,
+                //       itemBuilder: (context, index) {
+                //         return GestureDetector(
+                //           onTap: () {},
+                //           child: Card(
+                //               elevation: 5,
+                //               margin: EdgeInsets.only(
+                //                 right: 15,
+                //                 top: 5,
+                //                 bottom: 5,
+                //               ),
+                //               shape: RoundedRectangleBorder(
+                //                 borderRadius: const BorderRadius.all(
+                //                   Radius.circular(8.0),
+                //                 ),
+                //               ),
+                //               child: Column(
+                //                 children: [
+                //                   ClipRRect(
+                //                     borderRadius: BorderRadius.only(
+                //                         topLeft: Radius.circular(10),
+                //                         topRight: Radius.circular(10)),
+                //                     // child: Image.asset(
+                //                     //   "images/masuk-daftar.png",
+                //                     //   width: 250,
+                //                     //   height: 150,
+                //                     //   fit: BoxFit.cover,
+                //                     // ),
+                //                   ),
+                //                   Container(
+                //                     width: 220,
+                //                     padding: EdgeInsets.only(top: 5),
+                //                     alignment: Alignment.centerLeft,
+                //                     child: Text(
+                //                       "gxdgjhgbkhkc",
+                //                       textAlign: TextAlign.left,
+                //                       style: TextStyle(
+                //                           fontFamily: 'Baloo 2',
+                //                           fontSize: 18,
+                //                           fontWeight: FontWeight.w600),
+                //                     ),
+                //                   ),
+                //                   Container(
+                //                     width: 220,
+                //                     margin: EdgeInsets.only(right: 5, left: 5),
+                //                     alignment: Alignment.centerLeft,
+                //                     child: Text(
+                //                       "jhftdrsdfghjklouiytgfcvhjkyutrdgf",
+                //                       textAlign: TextAlign.left,
+                //                       style: TextStyle(
+                //                         fontFamily: 'Baloo 2',
+                //                         fontSize: 13,
+                //                         //fontWeight: FontWeight.w600
+                //                       ),
+                //                     ),
+                //                   )
+                //                 ],
+                //               )),
+                //         );
+                //       },
+                //       separatorBuilder: (context, index) {
+                //         return Divider();
+                //       },
+                //       itemCount: 1),
+                // ),
 
                 // Card Bacaan------------------------
                 // Container(
@@ -332,6 +334,38 @@ class menu extends StatelessWidget {
             ),
           )
         ],
+      ),
+      bottomNavigationBar: Container(
+        color: Colors.blue,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 20),
+          child: GNav(
+            // backgroundColor: Colors.black,
+            color: Colors.white,
+            activeColor: Colors.white,
+            tabBackgroundColor: Colors.blue.shade400,
+            gap: 8,
+            tabs: const [
+              GButton(
+                icon: Icons.home,
+                text: 'Home',
+                // onPressed:
+              ),
+              GButton(
+                icon: Icons.book,
+                text: 'Materi',
+              ),
+              GButton(
+                icon: Icons.task,
+                text: 'Quis',
+              ),
+              GButton(
+                icon: Icons.people,
+                text: 'Profil',
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
