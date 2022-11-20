@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -17,7 +19,7 @@ class pagemateri1 extends StatelessWidget {
         leading: IconButton(
             onPressed: () {
               Navigator.pushReplacement(
-                  context, MaterialPageRoute(builder: (context) => materi()));
+                  context, MaterialPageRoute(builder: (context) => menu()));
             },
             icon: new Icon(Icons.arrow_back, color: Colors.white)),
         centerTitle: true,
@@ -37,13 +39,14 @@ class pagemateri1 extends StatelessWidget {
       ),
       body: ListView(
         children: [
+          // -----------------------------01----------------------------------
           GestureDetector(
             onTap: () {
               Navigator.pushReplacement(
                   context, MaterialPageRoute(builder: (context) => materi()));
             },
             child: Container(
-              margin: EdgeInsets.only(top: 30),
+              margin: EdgeInsets.only(top: 30, left: 20, right: 20),
               width: 250,
               height: 110,
               decoration: BoxDecoration(
@@ -60,34 +63,106 @@ class pagemateri1 extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    alignment: Alignment.bottomLeft,
+                    alignment: Alignment.bottomRight,
                     margin: EdgeInsets.only(
                       left: 12,
                     ),
                     child: Column(
-                      // mainAxisAlignment: MainAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Container(
-                          margin: EdgeInsets.only(top: 30),
+                          margin: EdgeInsets.only(top: 25),
+                          width: 160,
+                          // height: 70,
                           child: Text(
-                            'HTML',
-                            textAlign: TextAlign.left,
-                            style: TextStyle(
-                                color: Colors.blue,
-                                fontSize: 24,
-                                fontFamily: "Gemunu Libre",
-                                fontWeight: FontWeight.w800),
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.only(top: 4),
-                          child: Text(
-                            "Hyper Text Markup Language",
+                            "HTML-01",
+                            maxLines: 4,
                             style: TextStyle(
                                 color: Colors.blue,
                                 fontSize: 14,
                                 fontFamily: "Gemunu Libre",
                                 fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(top: 4),
+                          width: 160,
+                          // height: 70,
+                          child: Text(
+                            "Pengenalan Dasar HTML untuk Pemula",
+                            maxLines: 4,
+                            style: TextStyle(
+                                color: Colors.blue,
+                                fontSize: 18,
+                                fontFamily: "Gemunu Libre",
+                                fontWeight: FontWeight.w400),
+                          ),
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+
+          // -----------------------------02----------------------------------
+          GestureDetector(
+            onTap: () {
+              Navigator.pushReplacement(
+                  context, MaterialPageRoute(builder: (context) => materi()));
+            },
+            child: Container(
+              margin: EdgeInsets.only(top: 15, left: 20, right: 20),
+              width: 250,
+              height: 110,
+              decoration: BoxDecoration(
+                  color: Colors.white, borderRadius: BorderRadius.circular(8)),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(left: 25),
+                    child: Image.asset(
+                      "images/html5.png",
+                      // width: 72,
+                      // height: 72,
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.bottomRight,
+                    margin: EdgeInsets.only(
+                      left: 12,
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(top: 25),
+                          width: 160,
+                          // height: 70,
+                          child: Text(
+                            "HTML-02",
+                            maxLines: 4,
+                            style: TextStyle(
+                                color: Colors.blue,
+                                fontSize: 14,
+                                fontFamily: "Gemunu Libre",
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(top: 4),
+                          width: 160,
+                          // height: 70,
+                          child: Text(
+                            "Apa itu Tag, Elemen, dan Atribut dalam HTML?",
+                            maxLines: 4,
+                            style: TextStyle(
+                                color: Colors.blue,
+                                fontSize: 18,
+                                fontFamily: "Gemunu Libre",
+                                fontWeight: FontWeight.w400),
                           ),
                         )
                       ],
