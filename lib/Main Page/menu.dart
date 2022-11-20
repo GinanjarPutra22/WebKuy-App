@@ -8,11 +8,17 @@ import 'package:web_kuy/daftar_masuk/masuk_screen.dart';
 import 'package:web_kuy/splash/splash_01.dart';
 import 'package:web_kuy/splash/splash_02.dart';
 
-class menu extends StatelessWidget {
+class menu extends StatefulWidget {
   const menu({super.key});
 
   @override
+  State<menu> createState() => _menuState();
+}
+
+class _menuState extends State<menu> {
+  @override
   Widget build(BuildContext context) {
+    const i = 2;
     return Scaffold(
       backgroundColor: Colors.blue,
       appBar: AppBar(
@@ -235,137 +241,10 @@ class menu extends StatelessWidget {
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                   ),
                 ),
-                // ---------------- Card Bacaan----------------
-                // Container(
-                //   height: 110,
-                //   //margin: EdgeInsets.only(right: 17, left: 17),
-                //   child: ListView.separated(
-                //       scrollDirection: Axis.horizontal,
-                //       itemBuilder: (context, index) {
-                //         return GestureDetector(
-                //           onTap: () {},
-                //           child: Card(
-                //               elevation: 5,
-                //               margin: EdgeInsets.only(
-                //                 right: 15,
-                //                 top: 5,
-                //                 bottom: 5,
-                //               ),
-                //               shape: RoundedRectangleBorder(
-                //                 borderRadius: const BorderRadius.all(
-                //                   Radius.circular(8.0),
-                //                 ),
-                //               ),
-                //               child: Column(
-                //                 children: [
-                //                   ClipRRect(
-                //                     borderRadius: BorderRadius.only(
-                //                         topLeft: Radius.circular(10),
-                //                         topRight: Radius.circular(10)),
-                //                     // child: Image.asset(
-                //                     //   "images/masuk-daftar.png",
-                //                     //   width: 250,
-                //                     //   height: 150,
-                //                     //   fit: BoxFit.cover,
-                //                     // ),
-                //                   ),
-                //                   Container(
-                //                     width: 220,
-                //                     padding: EdgeInsets.only(top: 5),
-                //                     alignment: Alignment.centerLeft,
-                //                     child: Text(
-                //                       "gxdgjhgbkhkc",
-                //                       textAlign: TextAlign.left,
-                //                       style: TextStyle(
-                //                           fontFamily: 'Baloo 2',
-                //                           fontSize: 18,
-                //                           fontWeight: FontWeight.w600),
-                //                     ),
-                //                   ),
-                //                   Container(
-                //                     width: 220,
-                //                     margin: EdgeInsets.only(right: 5, left: 5),
-                //                     alignment: Alignment.centerLeft,
-                //                     child: Text(
-                //                       "jhftdrsdfghjklouiytgfcvhjkyutrdgf",
-                //                       textAlign: TextAlign.left,
-                //                       style: TextStyle(
-                //                         fontFamily: 'Baloo 2',
-                //                         fontSize: 13,
-                //                         //fontWeight: FontWeight.w600
-                //                       ),
-                //                     ),
-                //                   )
-                //                 ],
-                //               )),
-                //         );
-                //       },
-                //       separatorBuilder: (context, index) {
-                //         return Divider();
-                //       },
-                //       itemCount: 1),
-                // ),
-
-                // Card Bacaan------------------------
-                // Container(
-                //   width: 300,
-                //   child: ListView(
-                //     scrollDirection: Axis.horizontal,
-                //     children: [
-                //       GestureDetector(
-                //           // child: Container(
-                //           //   // height: 90,
-                //           //   child: Row(
-                //           //     children: [
-                //           //       Container(),
-                //           //       Column(
-                //           //         children: [Text('data'), Text('data')],
-                //           //       )
-                //           //     ],
-                //           //   ),
-                //           // ),
-                //           ),
-
-                //       // color: Colors.blue,
-                //     ],
-                //   ),
-                // )
               ],
             ),
           )
         ],
-      ),
-      bottomNavigationBar: Container(
-        color: Colors.blue,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 20),
-          child: GNav(
-            // backgroundColor: Colors.black,
-            color: Colors.white,
-            activeColor: Colors.white,
-            tabBackgroundColor: Colors.blue.shade400,
-            gap: 8,
-            tabs: const [
-              GButton(
-                icon: Icons.home,
-                text: 'Home',
-                // onPressed:
-              ),
-              GButton(
-                icon: Icons.book,
-                text: 'Materi',
-              ),
-              GButton(
-                icon: Icons.task,
-                text: 'Quis',
-              ),
-              GButton(
-                icon: Icons.people,
-                text: 'Profil',
-              ),
-            ],
-          ),
-        ),
       ),
     );
   }

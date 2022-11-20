@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:web_kuy/Main%20Page/menu.dart';
+import 'package:web_kuy/materi-html/pagemateri1.dart';
 
 class materi extends StatelessWidget {
   const materi({super.key});
@@ -28,7 +29,7 @@ class materi extends StatelessWidget {
               icon: new Icon(Icons.notifications, color: Colors.white))
         ],
       ),
-      body: Column(
+      body: ListView(
         children: [
           Container(
             margin: EdgeInsets.only(top: 30, left: 20, right: 20),
@@ -76,7 +77,7 @@ class materi extends StatelessWidget {
                 GestureDetector(
                   onTap: () {
                     Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (context) => menu()));
+                        MaterialPageRoute(builder: (context) => pagemateri1()));
                   },
                   child: Container(
                     margin: EdgeInsets.only(top: 30),
