@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:web_kuy/BottomNavBar.dart';
 import 'package:web_kuy/Main%20Page/menu.dart';
 import 'package:web_kuy/daftar_masuk/daftar_screen.dart';
 import 'package:web_kuy/splash/splash_01.dart';
@@ -100,8 +101,10 @@ class _masuk_screenState extends State<masuk_screen> {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8))),
                       onPressed: () {
-                        Navigator.pushReplacement(context,
-                            MaterialPageRoute(builder: (context) => menu()));
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ButtomNavBar()));
                         debugPrint('ElevatedButton Masuk Clicked');
                       },
                       child: Text(

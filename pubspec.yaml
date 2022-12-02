@@ -36,6 +36,8 @@ dependencies:
   flutter_icons: ^1.1.0
   custom_navigation_bar: ^0.8.2
   google_nav_bar: ^5.0.6
+  firebase_core: ^2.3.0
+  firebase_auth: ^4.1.5
 
 dev_dependencies:
   flutter_test:
