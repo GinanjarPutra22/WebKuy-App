@@ -1,8 +1,5 @@
 import 'dart:async';
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:web_kuy/daftar_masuk/daftar_screen.dart';
 import 'package:web_kuy/splash/splash_02.dart';
 
 class splash_01 extends StatefulWidget {
@@ -15,14 +12,12 @@ class splash_01 extends StatefulWidget {
 class _splash_01State extends State<splash_01> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     startTimer();
   }
 
   startTimer() async {
     var duration = Duration(seconds: 3);
-
     return new Timer(duration, loginRoute);
   }
 
