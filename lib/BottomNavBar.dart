@@ -38,7 +38,7 @@ class Navbar extends State<ButtomNavBar> {
               backgroundColor: Colors.transparent,
               color: Colors.black,
               activeColor: Colors.white,
-              tabBackgroundColor: Colors.blue,   
+              tabBackgroundColor: Colors.blue,
               padding: EdgeInsets.all(10),
               tabs: [
                 GButton(
