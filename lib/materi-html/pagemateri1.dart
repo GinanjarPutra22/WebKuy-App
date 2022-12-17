@@ -30,11 +30,6 @@ class pagemateri1 extends StatelessWidget {
               fontFamily: "Gemunu Libre",
               fontWeight: FontWeight.w800),
         ),
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: new Icon(Icons.notifications, color: Colors.white))
-        ],
       ),
       body: ListView(
         children: [

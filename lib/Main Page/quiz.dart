@@ -1,9 +1,6 @@
+import 'package:belajarkuy/Main%20Page/quiz-html/quiz_html.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-
-import 'components/nav-drawer.dart';
-import 'package:belajarkuy/question_model.dart';
+import 'package:belajarkuy/Main%20Page/quiz-html/question_model.dart';
 
 class quiz extends StatefulWidget {
   const quiz({super.key});
@@ -14,165 +11,282 @@ class quiz extends StatefulWidget {
 
 class _quizState extends State<quiz> {
   //define the datas
-  List<Question> questionList = getQuestions();
-  int currentQuestionIndex = 0;
-  int score = 0;
-  Answer? selectedAnswer;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 245, 245, 245),
-      body: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 32),
-        child:
-            Column(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
-          const Text(
-            "Quiz",
-            style: TextStyle(
+      backgroundColor: Colors.blue,
+      appBar: AppBar(
+        elevation: 0,
+        leading: Icon(Icons.menu),
+        centerTitle: true,
+        title: Text(
+          'Quiz',
+          style: TextStyle(
               color: Colors.white,
-              fontSize: 24,
-            ),
-          ),
-          _questionWidget(),
-          _answerList(),
-          _nextButton(),
-        ]),
-      ),
-    );
-  }
-
-  _questionWidget() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(
-          "Question ${currentQuestionIndex + 1}/${questionList.length.toString()}",
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 20,
-            fontWeight: FontWeight.w600,
-          ),
+              fontSize: 16,
+              fontFamily: "Gemunu Libre",
+              fontWeight: FontWeight.w800),
         ),
-        const SizedBox(height: 20),
-        Container(
-          alignment: Alignment.center,
-          width: double.infinity,
-          padding: const EdgeInsets.all(32),
-          decoration: BoxDecoration(
-            color: Color.fromARGB(255, 98, 150, 198),
-            borderRadius: BorderRadius.circular(16),
-          ),
-          child: Text(
-            questionList[currentQuestionIndex].questionText,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 18,
-              fontWeight: FontWeight.w600,
+      ),
+      body: ListView(
+        children: [
+          Container(
+            margin: EdgeInsets.only(top: 30, left: 20, right: 20),
+            width: 360,
+            height: 150,
+            decoration: BoxDecoration(
+                color: Colors.white, borderRadius: BorderRadius.circular(8)),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  padding: EdgeInsets.only(),
+                  width: 146,
+                  // height: 20,
+                  // color: Colors.amber,
+                  child: Text(
+                    "Ayo latihan Quiz sekarang juga",
+                    style: TextStyle(
+                        color: Colors.blue,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.only(),
+                  // color: Colors.amber,
+                  child: Image.asset(
+                    "images/hero-materi.png",
+                    // width: 320,
+                    height: 100,
+                  ),
+                )
+              ],
             ),
           ),
-        )
-      ],
-    );
-  }
 
-  _answerList() {
-    return Column(
-      children: questionList[currentQuestionIndex]
-          .answersList
-          .map(
-            (e) => _answerButton(e),
+          // ----------------- Container body putih -------------------------
+          Container(
+            margin: EdgeInsets.only(top: 40),
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(25),
+                    topRight: Radius.circular(25))),
+            width: 360,
+            height: 490,
+            child: Column(
+              children: [
+                // --------------------------- HTML --------------------------------
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => quiz_html()));
+                  },
+                  child: Container(
+                    margin: EdgeInsets.only(top: 30, left: 20, right: 20),
+                    width: 315,
+                    height: 110,
+                    decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(15)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(left: 25),
+                          child: Image.asset(
+                            "images/html5.png",
+                            // width: 72,
+                            // height: 72,
+                          ),
+                        ),
+                        Container(
+                          alignment: Alignment.bottomRight,
+                          margin: EdgeInsets.only(
+                            left: 12,
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Container(
+                                width: 160,
+                                // height: 70,
+                                child: Text(
+                                  "Quiz HTML",
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 20,
+                                      fontFamily: "Gemunu Libre",
+                                      fontWeight: FontWeight.w800),
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(top: 5),
+
+                                // height: 70,
+                                child: Text(
+                                  "Hyper Text Markup Language",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                      fontFamily: "Gemunu Libre",
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+
+                // --------------------------- CSS --------------------------------
+                GestureDetector(
+                  onTap: () {
+                    // Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //         builder: (context) => pagematericss()));
+                  },
+                  child: Container(
+                    margin: EdgeInsets.only(top: 30, left: 20, right: 20),
+                    width: 315,
+                    height: 110,
+                    decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(15)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(left: 25),
+                          child: Image.asset(
+                            "images/css-3.png",
+                            // width: 72,
+                            // height: 72,
+                          ),
+                        ),
+                        Container(
+                          alignment: Alignment.bottomRight,
+                          margin: EdgeInsets.only(
+                            left: 12,
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Container(
+                                width: 160,
+                                // height: 70,
+                                child: Text(
+                                  'Quiz CSS',
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 20,
+                                      fontFamily: "Gemunu Libre",
+                                      fontWeight: FontWeight.w800),
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(top: 5),
+
+                                // height: 70,
+                                child: Text(
+                                  "Cascading style sheets",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                      fontFamily: "Gemunu Libre",
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+
+                // --------------------------- JS --------------------------------
+                GestureDetector(
+                  onTap: () {
+                    // Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //         builder: (context) => pagematerijs())
+                    //         );
+                  },
+                  child: Container(
+                    margin: EdgeInsets.only(top: 30, left: 20, right: 20),
+                    width: 315,
+                    height: 110,
+                    decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(15)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(left: 25),
+                          child: Image.asset(
+                            "images/js.png",
+                            // width: 72,
+                            // height: 72,
+                          ),
+                        ),
+                        Container(
+                          alignment: Alignment.bottomRight,
+                          margin: EdgeInsets.only(
+                            left: 12,
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Container(
+                                width: 160,
+                                // height: 70,
+                                child: Text(
+                                  'Quiz JS',
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 20,
+                                      fontFamily: "Gemunu Libre",
+                                      fontWeight: FontWeight.w800),
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(top: 5),
+
+                                // height: 70,
+                                child: Text(
+                                  "Java Script",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                      fontFamily: "Gemunu Libre",
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
           )
-          .toList(),
-    );
-  }
-
-  Widget _answerButton(Answer answer) {
-    bool isSelected = answer == selectedAnswer;
-
-    return Container(
-      width: double.infinity,
-      margin: const EdgeInsets.symmetric(vertical: 8),
-      height: 48,
-      child: ElevatedButton(
-        child: Text(answer.answerText),
-        style: ElevatedButton.styleFrom(
-          shape: const StadiumBorder(),
-          primary: isSelected ? Colors.orangeAccent : Colors.white,
-          onPrimary: isSelected ? Colors.white : Colors.black,
-        ),
-        onPressed: () {
-          if (selectedAnswer == null) {
-            if (answer.isCorrect) {
-              score++;
-            }
-            setState(() {
-              selectedAnswer = answer;
-            });
-          }
-        },
-      ),
-    );
-  }
-
-  _nextButton() {
-    bool isLastQuestion = false;
-    if (currentQuestionIndex == questionList.length - 1) {
-      isLastQuestion = true;
-    }
-
-    return Container(
-      width: MediaQuery.of(context).size.width * 0.5,
-      height: 48,
-      child: ElevatedButton(
-        child: Text(isLastQuestion ? "Submit" : "Next"),
-        style: ElevatedButton.styleFrom(
-          shape: const StadiumBorder(),
-          primary: Colors.blueAccent,
-          onPrimary: Colors.white,
-        ),
-        onPressed: () {
-          if (isLastQuestion) {
-            //display score
-
-            showDialog(context: context, builder: (_) => _showScoreDialog());
-          } else {
-            //next question
-            setState(() {
-              selectedAnswer = null;
-              currentQuestionIndex++;
-            });
-          }
-        },
-      ),
-    );
-  }
-
-  _showScoreDialog() {
-    bool isPassed = false;
-
-    if (score >= questionList.length * 0.6) {
-      //pass if 60 %
-      isPassed = true;
-    }
-    String title = isPassed ? "Passed " : "Failed";
-
-    return AlertDialog(
-      title: Text(
-        title + " | Score is $score",
-        style: TextStyle(color: isPassed ? Colors.green : Colors.redAccent),
-      ),
-      content: ElevatedButton(
-        child: const Text("Restart"),
-        onPressed: () {
-          Navigator.pop(context);
-          setState(() {
-            currentQuestionIndex = 0;
-            score = 0;
-            selectedAnswer = null;
-          });
-        },
+        ],
       ),
     );
   }
