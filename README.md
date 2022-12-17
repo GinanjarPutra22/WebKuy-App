@@ -1,4 +1,4 @@
-# belajarkuy
+# WebKuy!
 
 Aplikasi pembelajaran yang tertujukan pada pelajar kejuruan dalam
 memahami bahasa pemrograman
