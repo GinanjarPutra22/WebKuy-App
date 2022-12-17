@@ -94,6 +94,7 @@ class _menuState extends State<menu> {
                     topLeft: Radius.circular(25),
                     topRight: Radius.circular(25))),
             width: null,
+            height: 570,
             child: Column(
               children: [
                 // --------------------------Card Menu------------------------------------
@@ -249,218 +250,218 @@ class _menuState extends State<menu> {
                   child: Column(
                     //mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Container(
-                        alignment: Alignment.topLeft,
-                        margin: EdgeInsets.only(top: 14, left: 17),
-                        child: Text(
-                          'Kuy Membaca',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 16),
-                        ),
-                      ),
-                      Container(
-                          alignment: Alignment.topLeft,
-                          margin: EdgeInsets.only(left: 17),
-                          child: Text(
-                            'Mari belajar untuk mengembangkan wawasanmu',
-                            style: TextStyle(
-                                // fontFamily: font,
-                                fontSize: 14,
-                                fontWeight: FontWeight.w600),
-                          )),
-                      GestureDetector(
-                        onTap: () {
-                          showAlertDialog(context);
-                        },
-                        child: Container(
-                          margin: EdgeInsets.only(top: 30, left: 20, right: 20),
-                          height: 110,
-                          decoration: BoxDecoration(
-                              color: Colors.blue,
-                              borderRadius: BorderRadius.circular(15)),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(left: 25),
-                                child: Image.asset(
-                                  "images/html5.png",
-                                  // width: 72,
-                                  // height: 72,
-                                ),
-                              ),
-                              Container(
-                                alignment: Alignment.bottomRight,
-                                margin: EdgeInsets.only(
-                                  left: 12,
-                                ),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                      width: 160,
-                                      // height: 70,
-                                      child: Text(
-                                        "HTML-01",
-                                        textAlign: TextAlign.left,
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 20,
-                                            fontFamily: "Gemunu Libre",
-                                            fontWeight: FontWeight.w800),
-                                      ),
-                                    ),
-                                    Container(
-                                      margin: EdgeInsets.only(top: 5),
+                      // Container(
+                      //   alignment: Alignment.topLeft,
+                      //   margin: EdgeInsets.only(top: 14, left: 17),
+                      //   child: Text(
+                      //     'Kuy Membaca',
+                      //     style: TextStyle(
+                      //         fontWeight: FontWeight.bold, fontSize: 16),
+                      //   ),
+                      // ),
+                      // Container(
+                      //     alignment: Alignment.topLeft,
+                      //     margin: EdgeInsets.only(left: 17),
+                      //     child: Text(
+                      //       'Mari belajar untuk mengembangkan wawasanmu',
+                      //       style: TextStyle(
+                      //           // fontFamily: font,
+                      //           fontSize: 14,
+                      //           fontWeight: FontWeight.w600),
+                      //     )),
+                      // GestureDetector(
+                      //   onTap: () {
+                      //     showAlertDialog(context);
+                      //   },
+                      //   child: Container(
+                      //     margin: EdgeInsets.only(top: 30, left: 20, right: 20),
+                      //     height: 110,
+                      //     decoration: BoxDecoration(
+                      //         color: Colors.blue,
+                      //         borderRadius: BorderRadius.circular(15)),
+                      //     child: Row(
+                      //       mainAxisAlignment: MainAxisAlignment.start,
+                      //       children: [
+                      //         Container(
+                      //           margin: EdgeInsets.only(left: 25),
+                      //           child: Image.asset(
+                      //             "images/html5.png",
+                      //             // width: 72,
+                      //             // height: 72,
+                      //           ),
+                      //         ),
+                      //         Container(
+                      //           alignment: Alignment.bottomRight,
+                      //           margin: EdgeInsets.only(
+                      //             left: 12,
+                      //           ),
+                      //           child: Column(
+                      //             crossAxisAlignment: CrossAxisAlignment.start,
+                      //             mainAxisAlignment: MainAxisAlignment.center,
+                      //             children: [
+                      //               Container(
+                      //                 width: 160,
+                      //                 // height: 70,
+                      //                 child: Text(
+                      //                   "HTML-01",
+                      //                   textAlign: TextAlign.left,
+                      //                   style: TextStyle(
+                      //                       color: Colors.white,
+                      //                       fontSize: 20,
+                      //                       fontFamily: "Gemunu Libre",
+                      //                       fontWeight: FontWeight.w800),
+                      //                 ),
+                      //               ),
+                      //               Container(
+                      //                 margin: EdgeInsets.only(top: 5),
 
-                                      // height: 70,
-                                      child: Text(
-                                        "Hyper Text Markup Language",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 14,
-                                            fontFamily: "Gemunu Libre",
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                      //                 // height: 70,
+                      //                 child: Text(
+                      //                   "Hyper Text Markup Language",
+                      //                   style: TextStyle(
+                      //                       color: Colors.white,
+                      //                       fontSize: 14,
+                      //                       fontFamily: "Gemunu Libre",
+                      //                       fontWeight: FontWeight.bold),
+                      //                 ),
+                      //               )
+                      //             ],
+                      //           ),
+                      //         )
+                      //       ],
+                      //     ),
+                      //   ),
+                      // ),
 
-                      // --------------------------- CSS --------------------------------
-                      GestureDetector(
-                        onTap: () {
-                          showAlertDialog(context);
-                        },
-                        child: Container(
-                          margin: EdgeInsets.only(top: 20, left: 20, right: 20),
-                          height: 110,
-                          decoration: BoxDecoration(
-                              color: Colors.blue,
-                              borderRadius: BorderRadius.circular(15)),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(left: 25),
-                                child: Image.asset(
-                                  "images/css-3.png",
-                                  // width: 72,
-                                  // height: 72,
-                                ),
-                              ),
-                              Container(
-                                alignment: Alignment.bottomRight,
-                                margin: EdgeInsets.only(
-                                  left: 12,
-                                ),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                      width: 160,
-                                      // height: 70,
-                                      child: Text(
-                                        'CSS',
-                                        textAlign: TextAlign.left,
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 20,
-                                            fontFamily: "Gemunu Libre",
-                                            fontWeight: FontWeight.w800),
-                                      ),
-                                    ),
-                                    Container(
-                                      margin: EdgeInsets.only(top: 5),
+                      // // --------------------------- CSS --------------------------------
+                      // GestureDetector(
+                      //   onTap: () {
+                      //     showAlertDialog(context);
+                      //   },
+                      //   child: Container(
+                      //     margin: EdgeInsets.only(top: 20, left: 20, right: 20),
+                      //     height: 110,
+                      //     decoration: BoxDecoration(
+                      //         color: Colors.blue,
+                      //         borderRadius: BorderRadius.circular(15)),
+                      //     child: Row(
+                      //       mainAxisAlignment: MainAxisAlignment.start,
+                      //       children: [
+                      //         Container(
+                      //           margin: EdgeInsets.only(left: 25),
+                      //           child: Image.asset(
+                      //             "images/css-3.png",
+                      //             // width: 72,
+                      //             // height: 72,
+                      //           ),
+                      //         ),
+                      //         Container(
+                      //           alignment: Alignment.bottomRight,
+                      //           margin: EdgeInsets.only(
+                      //             left: 12,
+                      //           ),
+                      //           child: Column(
+                      //             crossAxisAlignment: CrossAxisAlignment.start,
+                      //             mainAxisAlignment: MainAxisAlignment.center,
+                      //             children: [
+                      //               Container(
+                      //                 width: 160,
+                      //                 // height: 70,
+                      //                 child: Text(
+                      //                   'CSS',
+                      //                   textAlign: TextAlign.left,
+                      //                   style: TextStyle(
+                      //                       color: Colors.white,
+                      //                       fontSize: 20,
+                      //                       fontFamily: "Gemunu Libre",
+                      //                       fontWeight: FontWeight.w800),
+                      //                 ),
+                      //               ),
+                      //               Container(
+                      //                 margin: EdgeInsets.only(top: 5),
 
-                                      // height: 70,
-                                      child: Text(
-                                        "Cascading style sheets",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 14,
-                                            fontFamily: "Gemunu Libre",
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                      //                 // height: 70,
+                      //                 child: Text(
+                      //                   "Cascading style sheets",
+                      //                   style: TextStyle(
+                      //                       color: Colors.white,
+                      //                       fontSize: 14,
+                      //                       fontFamily: "Gemunu Libre",
+                      //                       fontWeight: FontWeight.bold),
+                      //                 ),
+                      //               )
+                      //             ],
+                      //           ),
+                      //         )
+                      //       ],
+                      //     ),
+                      //   ),
+                      // ),
 
-                      // --------------------------- JS --------------------------------
-                      GestureDetector(
-                        onTap: () {
-                          showAlertDialog(context);
-                        },
-                        child: Container(
-                          margin: EdgeInsets.only(top: 20, left: 20, right: 20),
-                          height: 110,
-                          decoration: BoxDecoration(
-                              color: Colors.blue,
-                              borderRadius: BorderRadius.circular(15)),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(left: 25),
-                                child: Image.asset(
-                                  "images/js.png",
-                                  // width: 72,
-                                  // height: 72,
-                                ),
-                              ),
-                              Container(
-                                alignment: Alignment.bottomRight,
-                                margin: EdgeInsets.only(
-                                  left: 12,
-                                ),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                      width: 160,
-                                      // height: 70,
-                                      child: Text(
-                                        'Java Script',
-                                        textAlign: TextAlign.left,
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 20,
-                                            fontFamily: "Gemunu Libre",
-                                            fontWeight: FontWeight.w800),
-                                      ),
-                                    ),
-                                    Container(
-                                      margin: EdgeInsets.only(top: 5),
+                      // // --------------------------- JS --------------------------------
+                      // GestureDetector(
+                      //   onTap: () {
+                      //     showAlertDialog(context);
+                      //   },
+                      //   child: Container(
+                      //     margin: EdgeInsets.only(top: 20, left: 20, right: 20),
+                      //     height: 110,
+                      //     decoration: BoxDecoration(
+                      //         color: Colors.blue,
+                      //         borderRadius: BorderRadius.circular(15)),
+                      //     child: Row(
+                      //       mainAxisAlignment: MainAxisAlignment.start,
+                      //       children: [
+                      //         Container(
+                      //           margin: EdgeInsets.only(left: 25),
+                      //           child: Image.asset(
+                      //             "images/js.png",
+                      //             // width: 72,
+                      //             // height: 72,
+                      //           ),
+                      //         ),
+                      //         Container(
+                      //           alignment: Alignment.bottomRight,
+                      //           margin: EdgeInsets.only(
+                      //             left: 12,
+                      //           ),
+                      //           child: Column(
+                      //             crossAxisAlignment: CrossAxisAlignment.start,
+                      //             mainAxisAlignment: MainAxisAlignment.center,
+                      //             children: [
+                      //               Container(
+                      //                 width: 160,
+                      //                 // height: 70,
+                      //                 child: Text(
+                      //                   'Java Script',
+                      //                   textAlign: TextAlign.left,
+                      //                   style: TextStyle(
+                      //                       color: Colors.white,
+                      //                       fontSize: 20,
+                      //                       fontFamily: "Gemunu Libre",
+                      //                       fontWeight: FontWeight.w800),
+                      //                 ),
+                      //               ),
+                      //               Container(
+                      //                 margin: EdgeInsets.only(top: 5),
 
-                                      // height: 70,
-                                      child: Text(
-                                        "Cascading style sheets",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 14,
-                                            fontFamily: "Gemunu Libre",
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                      //                 // height: 70,
+                      //                 child: Text(
+                      //                   "Cascading style sheets",
+                      //                   style: TextStyle(
+                      //                       color: Colors.white,
+                      //                       fontSize: 14,
+                      //                       fontFamily: "Gemunu Libre",
+                      //                       fontWeight: FontWeight.bold),
+                      //                 ),
+                      //               )
+                      //             ],
+                      //           ),
+                      //         )
+                      //       ],
+                      //     ),
+                      //   ),
+                      // ),
                     ],
                   ),
                 ),

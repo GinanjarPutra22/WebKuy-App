@@ -28,7 +28,7 @@ class Navbar extends State<ButtomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(247, 249, 248, 248),
+      backgroundColor: Color.fromARGB(255, 243, 245, 247),
       //navbar
       bottomNavigationBar: Container(
         color: Colors.transparent,
