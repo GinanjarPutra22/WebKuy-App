@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
+import 'components/nav-drawer.dart';
+
 class profil extends StatefulWidget {
   const profil({super.key});
 
@@ -14,8 +16,23 @@ class _profilState extends State<profil> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Profil'),
+        elevation: 0,
+        centerTitle: true,
+        title: Text(
+          'Profil',
+          style: TextStyle(
+              color: Colors.white,
+              fontSize: 16,
+              fontFamily: "Gemunu Libre",
+              fontWeight: FontWeight.w800),
+        ),
+        actions: [
+          IconButton(
+              onPressed: () {},
+              icon: new Icon(Icons.notifications, color: Colors.white))
+        ],
       ),
+      drawer: DrawerWidget(),
     );
   }
 }

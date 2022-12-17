@@ -16,18 +16,13 @@ class materi extends StatelessWidget {
         leading: Icon(Icons.menu),
         centerTitle: true,
         title: Text(
-          'Web Kuy!',
+          'Materi',
           style: TextStyle(
               color: Colors.white,
               fontSize: 16,
               fontFamily: "Gemunu Libre",
               fontWeight: FontWeight.w800),
         ),
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: new Icon(Icons.notifications, color: Colors.white))
-        ],
       ),
       body: ListView(
         children: [

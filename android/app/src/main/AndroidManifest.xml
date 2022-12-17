@@ -2,7 +2,7 @@
     package="com.example.belajarkuy">
         <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
    <application
-        android:label="belajarkuy"
+        android:label="Web Kuy!"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

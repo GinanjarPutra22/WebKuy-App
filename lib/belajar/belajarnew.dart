@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:web_kuy/belajar/belajar_model.dart';
+
+import 'belajar_model.dart';
 
 class Belajarku extends StatefulWidget {
   const Belajarku({super.key});

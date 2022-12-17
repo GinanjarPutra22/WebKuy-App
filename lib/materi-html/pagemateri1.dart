@@ -3,10 +3,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:web_kuy/BottomNavBar.dart';
-import 'package:web_kuy/Main%20Page/materi.dart';
-import 'package:web_kuy/Main%20Page/menu.dart';
-import 'package:web_kuy/main.dart';
+
+import '../Main Page/materi.dart';
 
 class pagemateri1 extends StatelessWidget {
   const pagemateri1({super.key});
