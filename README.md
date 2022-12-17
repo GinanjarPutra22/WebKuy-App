@@ -1,6 +1,11 @@
-# web_kuy
+# belajarkuy
 
-A new Flutter project.
+Aplikasi pembelajaran yang tertujukan pada pelajar kejuruan dalam
+memahami bahasa pemrograman
+
+# ScreenShoot - WEB KUY!
+
+![A4 - 2](https://user-images.githubusercontent.com/98598266/207756478-abf37003-ce7b-4a53-945f-6ae9ff807ac1.png)
 
 ## Getting Started
 

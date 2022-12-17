@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:web_kuy/Main%20Page/menu.dart';
-import 'package:web_kuy/materi-html/pagemateri1.dart';
+
+import '../pilihan_materi/pagematericss.dart';
+import '../pilihan_materi/pagematerihtml.dart';
+import '../pilihan_materi/pagematerijs.dart';
 
 class materi extends StatelessWidget {
   const materi({super.key});
@@ -38,9 +38,10 @@ class materi extends StatelessWidget {
             decoration: BoxDecoration(
                 color: Colors.white, borderRadius: BorderRadius.circular(8)),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  margin: EdgeInsets.only(right: 12, left: 12),
+                  padding: EdgeInsets.only(),
                   width: 146,
                   // height: 20,
                   // color: Colors.amber,
@@ -53,11 +54,12 @@ class materi extends StatelessWidget {
                   ),
                 ),
                 Container(
+                  padding: EdgeInsets.only(),
                   // color: Colors.amber,
                   child: Image.asset(
                     "images/hero-materi.png",
                     // width: 320,
-                    height: 146,
+                    height: 100,
                   ),
                 )
               ],
@@ -68,24 +70,29 @@ class materi extends StatelessWidget {
           Container(
             margin: EdgeInsets.only(top: 40),
             decoration: BoxDecoration(
-                color: Colors.white, borderRadius: BorderRadius.circular(16)),
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(25),
+                    topRight: Radius.circular(25))),
             width: 360,
-            height: 490,
+            height: 600,
             child: Column(
               children: [
                 // --------------------------- HTML --------------------------------
                 GestureDetector(
                   onTap: () {
-                    Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (context) => pagemateri1()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => pagematerihtml()));
                   },
                   child: Container(
-                    margin: EdgeInsets.only(top: 30),
+                    margin: EdgeInsets.only(top: 30, left: 20, right: 20),
                     width: 315,
                     height: 110,
                     decoration: BoxDecoration(
                         color: Colors.blue,
-                        borderRadius: BorderRadius.circular(8)),
+                        borderRadius: BorderRadius.circular(15)),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
@@ -98,27 +105,31 @@ class materi extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          alignment: Alignment.bottomLeft,
+                          alignment: Alignment.bottomRight,
                           margin: EdgeInsets.only(
                             left: 12,
                           ),
                           child: Column(
-                            // mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Container(
-                                margin: EdgeInsets.only(top: 30),
+                                width: 160,
+                                // height: 70,
                                 child: Text(
-                                  'HTML',
+                                  "HTML-01",
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 24,
+                                      fontSize: 20,
                                       fontFamily: "Gemunu Libre",
                                       fontWeight: FontWeight.w800),
                                 ),
                               ),
                               Container(
-                                margin: EdgeInsets.only(top: 4),
+                                margin: EdgeInsets.only(top: 5),
+
+                                // height: 70,
                                 child: Text(
                                   "Hyper Text Markup Language",
                                   style: TextStyle(
@@ -135,19 +146,22 @@ class materi extends StatelessWidget {
                     ),
                   ),
                 ),
+
                 // --------------------------- CSS --------------------------------
                 GestureDetector(
                   onTap: () {
-                    Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (context) => menu()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => pagematericss()));
                   },
                   child: Container(
-                    margin: EdgeInsets.only(top: 30),
+                    margin: EdgeInsets.only(top: 30, left: 20, right: 20),
                     width: 315,
                     height: 110,
                     decoration: BoxDecoration(
                         color: Colors.blue,
-                        borderRadius: BorderRadius.circular(8)),
+                        borderRadius: BorderRadius.circular(15)),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
@@ -160,27 +174,31 @@ class materi extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          alignment: Alignment.bottomLeft,
+                          alignment: Alignment.bottomRight,
                           margin: EdgeInsets.only(
                             left: 12,
                           ),
                           child: Column(
-                            // mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Container(
-                                margin: EdgeInsets.only(top: 30),
+                                width: 160,
+                                // height: 70,
                                 child: Text(
                                   'CSS',
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 24,
+                                      fontSize: 20,
                                       fontFamily: "Gemunu Libre",
                                       fontWeight: FontWeight.w800),
                                 ),
                               ),
                               Container(
-                                margin: EdgeInsets.only(top: 4),
+                                margin: EdgeInsets.only(top: 5),
+
+                                // height: 70,
                                 child: Text(
                                   "Cascading style sheets",
                                   style: TextStyle(
@@ -201,16 +219,18 @@ class materi extends StatelessWidget {
                 // --------------------------- JS --------------------------------
                 GestureDetector(
                   onTap: () {
-                    Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (context) => menu()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => pagematerijs()));
                   },
                   child: Container(
-                    margin: EdgeInsets.only(top: 30),
+                    margin: EdgeInsets.only(top: 30, left: 20, right: 20),
                     width: 315,
                     height: 110,
                     decoration: BoxDecoration(
                         color: Colors.blue,
-                        borderRadius: BorderRadius.circular(8)),
+                        borderRadius: BorderRadius.circular(15)),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
@@ -223,29 +243,33 @@ class materi extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          alignment: Alignment.bottomLeft,
+                          alignment: Alignment.bottomRight,
                           margin: EdgeInsets.only(
                             left: 12,
                           ),
                           child: Column(
-                            // mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Container(
-                                margin: EdgeInsets.only(top: 30),
+                                width: 160,
+                                // height: 70,
                                 child: Text(
                                   'Java Script',
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 24,
+                                      fontSize: 20,
                                       fontFamily: "Gemunu Libre",
                                       fontWeight: FontWeight.w800),
                                 ),
                               ),
                               Container(
-                                margin: EdgeInsets.only(top: 4),
+                                margin: EdgeInsets.only(top: 5),
+
+                                // height: 70,
                                 child: Text(
-                                  "Hyper Text Markup Language",
+                                  "Cascading style sheets",
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 14,

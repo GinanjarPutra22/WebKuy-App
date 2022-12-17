@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.web_kuy">
+    package="com.example.belajarkuy">
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
    <application
-        android:label="web_kuy"
+        android:label="belajarkuy"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

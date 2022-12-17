@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:web_kuy/Main%20Page/materi.dart';
-import 'package:web_kuy/Main%20Page/menu.dart';
-import 'package:web_kuy/Main%20Page/profil.dart';
-import 'package:web_kuy/Main%20Page/quiz.dart';
+
+import 'Main Page/materi.dart';
+import 'Main Page/menu.dart';
+import 'Main Page/profil.dart';
+import 'Main Page/quiz.dart';
 
 class ButtomNavBar extends StatefulWidget {
   const ButtomNavBar({super.key});

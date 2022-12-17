@@ -1,6 +1,11 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:web_kuy/splash/splash_01.dart';
+import 'package:get/get.dart';
+
+import 'BottomNavBar.dart';
+import 'daftar_masuk/restapi/Loading.dart';
+import 'splash/splash_01.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -8,13 +13,27 @@ Future<void> main() async {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+FirebaseAuth _auth = FirebaseAuth.instance;
 
+Stream<User?> get streamAuthStatus => _auth.authStateChanges();
+
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: splash_01(),
+    return StreamBuilder<User?>(
+      stream: streamAuthStatus,
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.active) {
+          print(snapshot.data);
+          return GetMaterialApp(
+            debugShowCheckedModeBanner: false,
+            home: snapshot.data != null && snapshot.data!.emailVerified == true
+                ? ButtomNavBar()
+                : splash_01(),
+          );
+        }
+        return Loading();
+      },
     );
   }
 }

@@ -1,6 +1,6 @@
 {
-    "name": "web_kuy",
-    "short_name": "web_kuy",
+    "name": "belajarkuy",
+    "short_name": "belajarkuy",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:web_kuy/daftar_masuk/daftar_screen.dart';
-import 'package:web_kuy/daftar_masuk/masuk_screen.dart';
+
+import '../daftar_masuk/daftar_screen.dart';
+import '../daftar_masuk/masuk_screen.dart';
 
 class splash_02 extends StatefulWidget {
   const splash_02({Key? key}) : super(key: key);
@@ -67,7 +68,7 @@ class _splash_02State extends State<splash_02> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8))),
               onPressed: () {
-                Navigator.pushReplacement(context,
+                Navigator.push(context,
                     MaterialPageRoute(builder: (context) => masuk_screen()));
                 debugPrint('ElevatedButton Daftar Clicked');
               },
@@ -91,7 +92,7 @@ class _splash_02State extends State<splash_02> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8))),
               onPressed: () {
-                Navigator.pushReplacement(context,
+                Navigator.push(context,
                     MaterialPageRoute(builder: (context) => daftar_screen()));
                 debugPrint('ElevatedButton Daftar Clicked');
               },
