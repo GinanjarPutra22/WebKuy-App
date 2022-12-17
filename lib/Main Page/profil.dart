@@ -26,11 +26,6 @@ class _profilState extends State<profil> {
               fontFamily: "Gemunu Libre",
               fontWeight: FontWeight.w800),
         ),
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: new Icon(Icons.notifications, color: Colors.white))
-        ],
       ),
       drawer: DrawerWidget(),
     );

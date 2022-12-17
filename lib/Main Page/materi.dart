@@ -70,7 +70,7 @@ class materi extends StatelessWidget {
                     topLeft: Radius.circular(25),
                     topRight: Radius.circular(25))),
             width: 360,
-            height: 600,
+            height: 490,
             child: Column(
               children: [
                 // --------------------------- HTML --------------------------------
