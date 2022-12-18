@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 
 import '../models/model_berita.dart';
 
+// import '../../belajar/Main Page/models/model_berita.dart';
+
+// import '../models_news/model_berita.dart';
+
 class Detail extends StatelessWidget {
   final List list;
   final int index;

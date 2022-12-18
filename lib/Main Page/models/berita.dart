@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+// import '../../belajar/Main Page/view/detail_berita.dart';
 import '../../constants.dart';
+// import '../view_detail berita/detail_berita.dart';
 import '../view/detail_berita.dart';
 import 'model_berita.dart';
 
