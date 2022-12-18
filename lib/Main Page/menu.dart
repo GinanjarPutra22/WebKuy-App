@@ -1,5 +1,6 @@
 import 'package:belajarkuy/Main%20Page/models/berita.dart';
 import 'package:belajarkuy/pilihan_materi/diskusi.dart';
+import 'package:belajarkuy/pilihan_materi/video.dart';
 import 'package:flutter/material.dart';
 
 import 'components/nav-drawer.dart';
@@ -171,7 +172,11 @@ class _menuState extends State<menu> {
                                     borderRadius: BorderRadius.circular(8)),
                                 child: InkWell(
                                   onTap: () {
-                                    showAlertDialog(context);
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => video()));
+                                    // showAlertDialog(context);
                                   },
                                   splashColor: Colors.grey,
                                   child: Center(

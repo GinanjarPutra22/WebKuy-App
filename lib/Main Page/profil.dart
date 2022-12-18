@@ -2,6 +2,7 @@ import 'package:belajarkuy/Main%20Page/adddata.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 import 'components/nav-drawer.dart';
 
@@ -30,22 +31,23 @@ class _profilState extends State<profil> {
               fontWeight: FontWeight.w800),
         ),
       ),
-      body: ListView(
-        children: [],
+      body: WebView(
+        initialUrl: "https://web.telegram.org/z/#-1453185299",
+        javascriptMode: JavascriptMode.unrestricted,
       ),
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.add),
-        onPressed: (() {
-          backgroundColor:
-          // Color.fromARGB(255, 255, 187, 0);
-          // print('object');
-          Navigator.of(context)
-              .push(MaterialPageRoute(builder: (context) => adddata()))
-              .then((value) {
-            setState(() {});
-          });
-        }),
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   child: const Icon(Icons.add),
+      //   onPressed: (() {
+      //     backgroundColor:
+      //     // Color.fromARGB(255, 255, 187, 0);
+      //     // print('object');
+      //     Navigator.of(context)
+      //         .push(MaterialPageRoute(builder: (context) => adddata()))
+      //         .then((value) {
+      //       setState(() {});
+      //     });
+      //   }),
+      // ),
       drawer: DrawerWidget(),
     );
   }

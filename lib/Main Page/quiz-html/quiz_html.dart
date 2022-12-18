@@ -172,11 +172,11 @@ class _quizState extends State<quiz_html> {
       //pass if 60 %
       isPassed = true;
     }
-    String title = isPassed ? "Passed " : "Failed";
+    String title = isPassed ? "Passed " : "Gagal";
 
     return AlertDialog(
       title: Text(
-        title + " | Score is $score",
+        title + " | Skor Anda $score",
         style: TextStyle(color: isPassed ? Colors.green : Colors.redAccent),
       ),
       content: ElevatedButton(

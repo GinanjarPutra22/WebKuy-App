@@ -51,7 +51,7 @@ class Navbar extends State<ButtomNavBar> {
                 GButton(
                   icon: Icons.quiz,
                 ),
-                GButton(icon: Icons.people)
+                GButton(icon: Icons.chat_rounded)
               ],
               onTabChange: (index) {
                 setState(() {

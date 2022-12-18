@@ -1,14 +1,14 @@
+import 'package:belajarkuy/Main%20Page/menu.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-import '../Main Page/menu.dart';
-
-class Diskusi extends StatelessWidget {
-  const Diskusi({super.key});
+class video extends StatelessWidget {
+  const video({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final String font = 'Baloo 2';
     return Scaffold(
       backgroundColor: Colors.blue,
       appBar: AppBar(
@@ -21,7 +21,7 @@ class Diskusi extends StatelessWidget {
             icon: new Icon(Icons.arrow_back, color: Colors.white)),
         centerTitle: true,
         title: Text(
-          'Diskusi Discord',
+          'video',
           style: TextStyle(
               color: Colors.white,
               fontSize: 16,
@@ -31,7 +31,7 @@ class Diskusi extends StatelessWidget {
       ),
       body: WebView(
         initialUrl:
-            "https://discord.com/channels/1054050505678147626/1054050506831564841",
+            "https://www.youtube.com/playlist?list=PLFIM0718LjIVuONHysfOK0ZtiqUWvrx4F",
         javascriptMode: JavascriptMode.unrestricted,
       ),
     );
