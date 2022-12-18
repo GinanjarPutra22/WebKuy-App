@@ -67,110 +67,102 @@ List<Question> getQuestions() {
   ));
 
   list.add(Question(
-    "Pengertian bahasa CSS yang benar adalah...",
+    "HTML merupakan singkatan dari...",
     [
-      Answer(
-          "Bahasa pemrograman yang digunakan untuk pengembangan website agar lebih dinamis",
-          false),
-      Answer(
-          "Sebuah bahasa yang menggunakan markup atau penanda untuk membuat halaman web",
-          false),
-      Answer(
-          "Sebuah bahasa untuk mengatur tampilan web sehingga terlihat lebih menarik dan indah",
-          true),
-      Answer(
-          "Bahasa pemrograman web yang digunakan untuk memanipulasi elemen HTML dan membuat interaksi",
-          false),
+      Answer("Hyper Tech Markup Language", false),
+      Answer("Hyper Team Markup Laguage", false),
+      Answer("Hyper Test Markup Laguage", true),
+      Answer("Hyper Tool Markup Laguage", false),
     ],
   ));
 
   list.add(Question(
-    "Format penulisan sintaks CSS yang benar adalah...",
+    "Salah satu type yang berfungsi untuk menerima masukan berupa teks dari pengguna berikut ini adalah...",
     [
-      Answer("Selector {Property: value;}", true),
-      Answer("Property {Selector: value;}", false),
-      Answer("Value {Property: selector;}", false),
-      Answer("Selector {value: property;}", false),
+      Answer("Text", true),
+      Answer("Checkbox", false),
+      Answer("List", false),
+      Answer("Submit", false),
     ],
   ));
 
   list.add(Question(
-    "Pada CSS, untuk menambahkan background color untuk semua <h1> adalah?",
+    "Atribut NAME digunakan sebagai...",
     [
-      Answer("all.h1 {background-color:#FFFFFF }", false),
-      Answer("#h1 {background-color:#FFFFFF }", false),
-      Answer(".h1 {background-color:#FFFFFF }", false),
-      Answer("h1 {background-color:#FFFFFF }", true),
+      Answer("Menandai lingkaran", false),
+      Answer("Menandai teks", false),
+      Answer("Menentukan panjang maksimun teks", false),
+      Answer("Menamai kotak", true),
     ],
   ));
 
   list.add(Question(
-    "Manakah sintaks CSS yang benar?",
+    "Untuk menerima masukan berupa pilihan, pilihan yang dapat dipilih bias atau lebih dari satu yaitu...",
     [
-      Answer("body:color=black;", false),
-      Answer("{body;color:black;}", false),
-      Answer("{body:color=black;}", false),
-      Answer("body {color:black;}", true)
+      Answer("Text", false),
+      Answer("Submit", false),
+      Answer("Radio", false),
+      Answer("Checkbox", true)
     ],
   ));
 
   list.add(Question(
-    "Manakah yang merupakan properti untuk mengatur ketebalan font?",
+    "Berikut ini perintah untuk melakukan break pada pembuatan situs HTML adalah...",
     [
-      Answer("font-weight", true),
-      Answer("font-height", false),
-      Answer("font-width", false),
-      Answer("font-dimensional", false),
+      Answer("BR", true),
+      Answer("HR", false),
+      Answer("LI", false),
+      Answer("OL", false),
     ],
   ));
 
   list.add(Question(
-    "Manakah dibawah ini yang merupakan sintaks javascript untuk mengambil elemen HTML secara spesifik pada atribut ID?",
+    "Untuk membuat tabel biasanya menggunakan tag...",
     [
-      Answer("document.getElementById(“demo”);", true),
-      Answer("document.getElementByName(“demo”);", false),
-      Answer("document.getElementsByClassName(“demo”);", false),
-      Answer("document.getElementsByTagName(“demo”);", false),
+      Answer("<table>", true),
+      Answer("<html>", false),
+      Answer("<head>", false),
+      Answer("<small>", false),
     ],
   ));
 
   list.add(Question(
-    "Bagaimana membuat komentar di javascript?",
+    "Fungsi dari <center> adalah...",
     [
-      Answer(" <!–ini komentar–>", false),
-      Answer("*ini komentar*", false),
-      Answer("//ini komentar", true),
-      Answer("/* ini komentar */", false),
+      Answer("Menampilkan informasi", false),
+      Answer("Mengubah tulisan menjadi Strong", false),
+      Answer("Rata tengah", true),
+      Answer("Mempertebal tulisan", false),
     ],
   ));
 
   list.add(Question(
-    "Perintah di javascript yang berfungsi untuk menampilkan data/informasi dalam bentuk POP UP adalah",
+    "Properti <li> pada list-ing berguna untuk...",
     [
-      Answer("alert()", true),
-      Answer("show()", false),
-      Answer("write()", false),
-      Answer("pop_up()", false),
+      Answer("Membuat bullet point atau baris baru pada list", true),
+      Answer("Membuat teks miring", false),
+      Answer("Membuat teks tebal", false),
+      Answer("Pindah baris", false),
     ],
   ));
 
   list.add(Question(
-    "Bagaimana membuat perulangan while di javascript",
+    "Type yang berfungsi untuk menerima masukan berupa teks dari penguna dalam formulir adalah...",
     [
-      Answer("while (i<=10) then", false),
-      Answer("while : i<=10", false),
-      Answer("while {i<=10}", false),
-      Answer("while (i<=10)", true),
+      Answer("Submit", false),
+      Answer("Reset", false),
+      Answer("Radio", false),
+      Answer("Text", true),
     ],
   ));
 
   list.add(Question(
-    "Berikut adalah jenis-jenis array di javascript, KECUALI",
+    "HTML dibuat oleh Tim Berners-Lee, seorang ahli...",
     [
-      Answer("Array Numerik", false),
-      Answer("Array Assosiatif", false),
-      Answer("Array Boolean", true),
-      Answer("Array Campuran", false),
+      Answer("Networking", false),
+      Answer("Komputer", false),
+      Answer("Fisika", true),
+      Answer("IT", false),
     ],
   ));
 
