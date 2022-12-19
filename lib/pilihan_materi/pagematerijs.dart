@@ -11,7 +11,7 @@ class pagematerijs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<QuerySnapshot<Map<String, dynamic>>>(
-      stream: FirebaseFirestore.instance.collection('javascript').snapshots(),
+      stream: FirebaseFirestore.instance.collection('js').snapshots(),
       builder: (context, snapshot) {
         if (snapshot.hasData) {
           var javascript = snapshot.data!.docs
@@ -73,7 +73,7 @@ class pagematerijs extends StatelessWidget {
                             Container(
                               margin: EdgeInsets.only(left: 25),
                               child: Image.asset(
-                                "images/css-3.png",
+                                "images/js.png",
                               ),
                             ),
                             Container(

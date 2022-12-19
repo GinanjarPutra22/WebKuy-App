@@ -22,7 +22,7 @@ class _DetailJsState extends State<DetailJs> {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return StreamBuilder<QuerySnapshot<Map<String, dynamic>>>(
-        stream: FirebaseFirestore.instance.collection('javascript').snapshots(),
+        stream: FirebaseFirestore.instance.collection('js').snapshots(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             var javascript = snapshot.data!.docs
@@ -43,7 +43,7 @@ class _DetailJsState extends State<DetailJs> {
                         height: height * 0.30,
                         decoration: BoxDecoration(
                             image: DecorationImage(
-                                image: AssetImage("images/css.png"),
+                                image: AssetImage("images/js-hero.png"),
                                 fit: BoxFit.cover)),
                         child: Container(
                           decoration: BoxDecoration(
